@@ -13,18 +13,6 @@ export default function Home() {
           celsius: (e.target.value - 32) * (5 / 9),
           fahrenheit: e.target.value,
         });
-    // if (select === 1) {
-    //   settemp({
-    //     celsius: e.target.value,
-    //     fahrenheit: e.target.value * (9 / 5) + 32,
-    //   });
-    // }
-    // if (select === 2) {
-    //   settemp({
-    //     celsius: (e.target.value - 32) * (5 / 9),
-    //     fahrenheit: e.target.value,
-    //   });
-    // } else console.log("invalid");
   };
 
   const renderList = [
