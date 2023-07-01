@@ -13,6 +13,17 @@ export default function Home() {
         id === "celsius" ? value * (9 / 5) + 32 : (value - 32) * (5 / 9)
       ),
     });
+
+    // document.getElementById(id).focus();
+    // e.target.id == "eg-32"
+    //   ? settemp({
+    //       celsius: e.target.value,
+    //       fahrenheit: e.target.value * (9 / 5) + 32,
+    //     })
+    //   : settemp({
+    //       celsius: (e.target.value - 32) * (5 / 9),
+    //       fahrenheit: e.target.value,
+    //     });
   };
 
   // const renderList = [
@@ -59,23 +70,25 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full h-full p-2 flex ">
-          <div className="w-3/5 h-1/6  mx-auto mt-20 rounded-md   flex flex-row">
+          <div className="w-3/5 h-1/6  mx-auto mt-20 rounded-md border-primary border  flex flex-row">
+            {console.log("temp", temp)}
             {inputComponent}
-            {/* {Object.keys(temp)
-              .sort()
-              .map((key) => (
-                <div key={key} className="">
+            {/* {renderList.map((value, index) => (
+              <div key={index} className="w-1/2 p-2 flex flex-col">
+                <div className="font-semibold text-md">{value.heading}</div>
+                <div className="my-auto">
+                  temp
                   <input
-                    min="0.00"
                     type="number"
-                    step="0.01"
-                    id={key}
-                    value={temp[key]}
+                    id={value.placeholder}
+                    value={value.value}
                     onChange={handleChange}
-                    className="input input-bordered  bg-black text-white input-primary w-full max-w-xs"
+                    placeholder={value.placeholder}
+                    className="input input-bordered bg-black text-white input-primary w-full max-w-xs"
                   />
                 </div>
-              ))} */}
+              </div>
+            ))} */}
           </div>
         </div>
       </div>
