@@ -4,11 +4,17 @@ export default function Home() {
   const [temp, setTemp] = useState({ celsius: 0.0, fahrenheit: 32 });
 
   const handleChange = (index, value) => {
+    // console.log(index, value);
+
     setTemp({
-      [index == 0 ? "celsius" : "fahrenheit"]: value,
-      [index == 0 ? "fahrenheit" : "celsius"]:
-        index == 0 ? (value - 32) * (5 / 9) : value * (9 / 5) + 32,
+      celsius: index == 0 ? value : (value - 32) * (5 / 9),
+      fahrenheit: index == 1 ? value : value * (9 / 5) + 32,
     });
+    // setTemp({
+    //   [index == 0 ? "celsius" : "fahrenheit"]: value,
+    //   [index == 0 ? "fahrenheit" : "celsius"]:
+    //     index == 0 ? (value - 32) * (5 / 9) : value * (9 / 5) + 32,
+    // });
   };
 
   const renderList = [
